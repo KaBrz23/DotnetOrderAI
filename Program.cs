@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
+using DotnetOrderAI.Services.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +41,18 @@ builder.Services.AddSwaggerGen(optopns =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     optopns.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
+
+FirebaseApp.Create(new AppOptions
+{
+    Credential = GoogleCredential.FromFile("authapp.json")
+});
+
+builder.Services.AddHttpClient<IAuthService, AuthService>((sp, httpClient) =>
+{
+    var configuration = sp.GetRequiredService<IConfiguration>();
+    httpClient.BaseAddress = new Uri(configuration["Authentication:TokenUri"]!);
+});
+
 
 var app = builder.Build();
 
