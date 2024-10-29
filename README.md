@@ -1,60 +1,60 @@
-# LesSoft - A TPC Solution
+# OrderAI
 
-## Sumário
+## SumÃ¡rio
 - [Integrantes;](#integrantes)
 - [Arquitetura da API;](#arquitetura-da-api)
-- [Instruções para uso da aplicação;](#instruções-para-uso-da-aplicação)
-- [Observações importantes.](#observações-importantes)
+- [InstruÃ§Ãµes para uso da aplicaÃ§Ã£o;](#instruÃ§Ãµes-para-uso-da-aplicaÃ§Ã£o)
+- [ObservaÃ§Ãµes importantes.](#observaÃ§Ãµes-importantes)
 
 ## Integrantes
 - Gabriel Augusto Fernandes - RM98986
 
-- Kauê Fernandes Braz - RM97768
+- KauÃª Fernandes Braz - RM97768
 
 - Mariana Trentino Albano - RM551154
 
 - Matheus Dantas de Sousa - RM98406
 
-- Thomas Nícolas de Melo Mendonça - RM99832
+- Thomas NÃ­colas de Melo MendonÃ§a - RM99832
 
-## Arquitetura da API: Monolítica vs Microserviços
+## Arquitetura da API: MonolÃ­tica vs MicroserviÃ§os
 
-### Monolítica vs Microserviços
+### MonolÃ­tica vs MicroserviÃ§os
 
-- **Arquitetura Monolítica**: Em um sistema monolítico, todas as funcionalidades da aplicação são integradas em um único código base. Isso significa que as diferentes partes, como a lógica de negócios, a interface do usuário e a camada de acesso a dados, estão todas no mesmo projeto, executadas como uma única unidade.
+- **Arquitetura MonolÃ­tica**: Em um sistema monolÃ­tico, todas as funcionalidades da aplicaÃ§Ã£o sÃ£o integradas em um Ãºnico cÃ³digo base. Isso significa que as diferentes partes, como a lÃ³gica de negÃ³cios, a interface do usuÃ¡rio e a camada de acesso a dados, estÃ£o todas no mesmo projeto, executadas como uma Ãºnica unidade.
 
-- **Arquitetura de Microserviços**: Essa abordagem divide a aplicação em vários serviços menores e independentes que se comunicam entre si. Cada microserviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implantado e escalado de forma independente.
+- **Arquitetura de MicroserviÃ§os**: Essa abordagem divide a aplicaÃ§Ã£o em vÃ¡rios serviÃ§os menores e independentes que se comunicam entre si. Cada microserviÃ§o Ã© responsÃ¡vel por uma funcionalidade especÃ­fica e pode ser desenvolvido, implantado e escalado de forma independente.
 
 ---
 
-### Definição de arquitetura
+### DefiniÃ§Ã£o de arquitetura
 
-Optamos pela arquitetura monolítica por alguns motivos-chave, considerando o estágio atual do projeto e as necessidades específicas da aplicação:
+Optamos pela arquitetura monolÃ­tica por alguns motivos-chave, considerando o estÃ¡gio atual do projeto e as necessidades especÃ­ficas da aplicaÃ§Ã£o:
 
 1. **Simplicidade no Desenvolvimento**: 
-   - A arquitetura monolítica é mais simples de desenvolver e gerenciar no início de um projeto. Com tudo em um único código base, o time pode focar em entregar funcionalidades rapidamente sem a complexidade de orquestrar múltiplos serviços.
+   - A arquitetura monolÃ­tica Ã© mais simples de desenvolver e gerenciar no inÃ­cio de um projeto. Com tudo em um Ãºnico cÃ³digo base, o time pode focar em entregar funcionalidades rapidamente sem a complexidade de orquestrar mÃºltiplos serviÃ§os.
 
-2. **Facilidade de Implantação**: 
-   - Com um monólito, há apenas uma aplicação para ser implantada e mantida, simplificando o processo de deployment. Isso é ideal quando a infraestrutura da aplicação ainda é pequena e não exige soluções complexas.
+2. **Facilidade de ImplantaÃ§Ã£o**: 
+   - Com um monÃ³lito, hÃ¡ apenas uma aplicaÃ§Ã£o para ser implantada e mantida, simplificando o processo de deployment. Isso Ã© ideal quando a infraestrutura da aplicaÃ§Ã£o ainda Ã© pequena e nÃ£o exige soluÃ§Ãµes complexas.
 
 3. **Custo Inicial Menor**: 
-   - Arquiteturas de microserviços podem ser mais caras em termos de infraestrutura, já que cada serviço pode exigir sua própria infraestrutura de execução, como contêineres ou máquinas virtuais.
+   - Arquiteturas de microserviÃ§os podem ser mais caras em termos de infraestrutura, jÃ¡ que cada serviÃ§o pode exigir sua prÃ³pria infraestrutura de execuÃ§Ã£o, como contÃªineres ou mÃ¡quinas virtuais.
 
 ---
 
 ### Tecnologias utilizadas
-- **`Linguagem de Programação`**: C#;
+- **`Linguagem de ProgramaÃ§Ã£o`**: C#;
 - **`Framework`**: .NET Core 8.0;
 - **`Banco de Dados`**: Oracle Database;
 - **`Design Pattern`**: Repository Pattern;
 
-## Instruções para Uso da Aplicação
+## InstruÃ§Ãµes para Uso da AplicaÃ§Ã£o
 
-### Inicialização da Aplicação
-- Para iniciar a aplicação, selecione a configuração **`https`** e execute o projeto. Isso pode ser feito diretamente no Visual Studio (Ambiente de Desenvolvimento Integrado).
+### InicializaÃ§Ã£o da AplicaÃ§Ã£o
+- Para iniciar a aplicaÃ§Ã£o, selecione a configuraÃ§Ã£o **`https`** e execute o projeto. Isso pode ser feito diretamente no Visual Studio (Ambiente de Desenvolvimento Integrado).
 
-### Realização de Requisições
-- Após iniciar a aplicação, a documentação da API será aberta automaticamente no seu navegador padrão.
-- Na página da documentação, você poderá visualizar todos os endpoints disponíveis e suas descrições.
-- Para testar uma requisição, clique no endpoint desejado e, em seguida, no botão **`Try it out`**.
-- Complete os campos necessários para a requisição e clique em **`Execute`** para enviar a solicitação e ver a resposta da API.
+### RealizaÃ§Ã£o de RequisiÃ§Ãµes
+- ApÃ³s iniciar a aplicaÃ§Ã£o, a documentaÃ§Ã£o da API serÃ¡ aberta automaticamente no seu navegador padrÃ£o.
+- Na pÃ¡gina da documentaÃ§Ã£o, vocÃª poderÃ¡ visualizar todos os endpoints disponÃ­veis e suas descriÃ§Ãµes.
+- Para testar uma requisiÃ§Ã£o, clique no endpoint desejado e, em seguida, no botÃ£o **`Try it out`**.
+- Complete os campos necessÃ¡rios para a requisiÃ§Ã£o e clique em **`Execute`** para enviar a solicitaÃ§Ã£o e ver a resposta da API.
