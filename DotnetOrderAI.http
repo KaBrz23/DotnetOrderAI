@@ -1,6 +1,17 @@
 @DotnetOrderAI_HostAddress = http://localhost:5130
 
-GET {{DotnetOrderAI_HostAddress}}/weatherforecast/
-Accept: application/json
+# Endpoint para treinar o modelo
+POST {{DotnetOrderAI_HostAddress}}/train
+Content-Type: application/json
+
+### 
+
+# Endpoint para realizar uma predição
+POST {{DotnetOrderAI_HostAddress}}/predict
+Content-Type: application/json
+{
+  "Text": "Bom Dia!",
+  "Sentiment": true
+}
 
 ###

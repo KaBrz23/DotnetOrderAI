@@ -1,4 +1,4 @@
-using DotnetOrderAI.Data;
+ï»¿using DotnetOrderAI.Data;
 using DotnetOrderAI.Repository;
 using DotnetOrderAI.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +29,7 @@ builder.Services.AddSwaggerGen(optopns =>
     optopns.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Projeto de conclusão Challenge FIAP 2024 - 2º Semestre",
+        Title = "Projeto de conclusï¿½o Challenge FIAP 2024 - 2ï¿½ Semestre",
         Description = "API criada pelo time Solution Developers para o app chamado OrderAI",
         Contact = new OpenApiContact
         {
